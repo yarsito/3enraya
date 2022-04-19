@@ -4,14 +4,14 @@ X, O, BLANCO = 'X', 'O', ' '
 
 def main():
     print('Bienvenido a 3 en raya!')
-    tableroJuego = obtenerTableroVacio()  # Create a TTT board dictionary.
-    jugadorActual, jugadorSiguiente = X, O  # X goes first, O goes next.
+    tableroJuego = obtenerTableroVacio()  # Crea el tablero vacío de 3 en raya
+    jugadorActual, jugadorSiguiente = X, O  # X primero, O siguiente
 
-    while True:  # Main game loop.
-        # Display the board on the screen:
+    while True:  # Bucle principal del juego
+        # Muestra el tablero en pantalla:
         print(obtenerStrTablero(tableroJuego))
 
-        # Keep asking the player until they enter a number 1-9:
+        # pregunta mientras el usuario no introduzca una celda válida
         movimiento = None
         while not esCeldaValida(tableroJuego, movimiento):
             print('')
